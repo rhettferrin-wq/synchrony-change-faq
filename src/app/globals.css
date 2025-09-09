@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  /* Synchrony Brand Colors */
+  --synchrony-gold: #F4B942;
+  --synchrony-dark-gold: #E6A829;
+  --synchrony-blue: #003875;
+  --synchrony-light-blue: #0066CC;
+  --synchrony-navy: #1C2B57;
+  --synchrony-gray: #666666;
+  --synchrony-light-gray: #F5F5F5;
+  --synchrony-border-gray: #E0E0E0;
+  
+  /* Layout Colors */
+  --background: #ffffff;
+  --foreground: #333333;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  
+  /* Synchrony Brand Colors for Tailwind */
+  --color-synchrony-gold: var(--synchrony-gold);
+  --color-synchrony-dark-gold: var(--synchrony-dark-gold);
+  --color-synchrony-blue: var(--synchrony-blue);
+  --color-synchrony-light-blue: var(--synchrony-light-blue);
+  --color-synchrony-navy: var(--synchrony-navy);
+  --color-synchrony-gray: var(--synchrony-gray);
+  --color-synchrony-light-gray: var(--synchrony-light-gray);
+  --color-synchrony-border-gray: var(--synchrony-border-gray);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Custom Synchrony-styled elements */
+.synchrony-button-primary {
+  background-color: var(--synchrony-gold);
+  color: var(--synchrony-navy);
+  border: 2px solid var(--synchrony-gold);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.synchrony-button-primary:hover {
+  background-color: var(--synchrony-dark-gold);
+  border-color: var(--synchrony-dark-gold);
+}
+
+.synchrony-button-secondary {
+  background-color: transparent;
+  color: var(--synchrony-blue);
+  border: 2px solid var(--synchrony-blue);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.synchrony-button-secondary:hover {
+  background-color: var(--synchrony-blue);
+  color: white;
+}
